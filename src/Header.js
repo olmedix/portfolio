@@ -1,15 +1,15 @@
-import "../css/home.css";
+import "./css/home.css";
 
 export default function Header(){
     return(
         <header className="header__container">
             <h1 className="header__title">Portfolio</h1>
             <nav className="header__nav">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skills</a>
-                <a href="#">Contact</a>
-                <a href="#">NewsLetter</a>
+                <a href="#">Inicio</a>
+                <a href="#">Sobre mí</a>
+                <a href="#">Habilidades</a>
+                <a href="#">Contacto</a>
+                <a href="#">Noticias</a>
             </nav>
         </header>
     );
