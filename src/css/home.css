@@ -1,0 +1,131 @@
+:root{
+    --color-01:#01eefe;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+    background-color: black;
+}
+
+.header__container{
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+.header__title{   
+    color: white;
+    font-size: 4rem;
+    display: inline-block;
+    margin-left: 4rem;
+}
+
+.header__nav{
+    display: inline-block;
+}
+
+.header__nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    padding: 3rem;
+   justify-content: center;
+   border-radius: 5px;
+   font-weight: bold;
+}
+
+.header__nav a:hover{
+    color: var(--color-01);
+}
+
+
+.body__container{
+    display: flex;
+    width: 100%;
+    color: white;
+}
+
+.body__description{
+    width: 60%;
+    margin: 4rem;
+}
+
+.description__welcome{
+    font-size: 4rem;
+}
+
+.description__name{
+    font-size: 7rem;
+    font-weight: bold;
+}
+
+.description__profession{
+    font-size: 4rem;
+
+    margin-bottom: 5rem;
+}
+.description__profession span{
+    color: var(--color-01);
+}
+
+.description__content{
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.social-icons{
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    color: #00bfff; 
+    transition: color 0.3s ease;
+    margin-right: 2.5rem;
+  }
+  
+.social-icons a:hover {
+    color: white; 
+  }
+
+
+.btn-download-cv {
+    background-color: var(--color-01);
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 0 10px var(--color-01);
+    cursor: pointer;
+    font-size: 2rem;
+    transition: background-color 0.5s ease;
+}
+  
+  .btn-download-cv:hover {
+    background-color: white;
+    color: var(--color-01);
+  }
+  
+
+.body__image{
+    width: 40%;
+}
+
+.body__image img{
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 0 15px var(--color-01);
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+
+
+  
