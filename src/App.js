@@ -1,16 +1,16 @@
 import "./App.css";
-import Home from "./home-components/Home";
+//import Home from "./home-components/Home";
 import SobreMi from "./sobreMi-components/SobreMi";
-import Contacto from "./contacto-components/Contacto";
+//import Contacto from "./contacto-components/Contacto";
 
 function App() {
   /*  
   <Home/>
-  <SobreMi/>
+  <Contacto />
   */
   return (
     <div className="App">
-      <Contacto />
+      <SobreMi />
     </div>
   );
 }
