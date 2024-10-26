@@ -1,5 +1,6 @@
 import "../css/sobreMi.css";
 import Header from "../Header";
+import Tecnologias from "./Tecnologias";
 import { data } from "../data";
 import { MdWork } from "react-icons/md";
 import { IoSchoolSharp } from "react-icons/io5";
@@ -9,6 +10,8 @@ export default function SobreMi() {
   return (
     <>
       <Header />
+      <Tecnologias />
+
       <section className="about__work">
         <div className="about__container-work">
           <div className="container-work__title">
@@ -24,6 +27,7 @@ export default function SobreMi() {
       </section>
 
       <TitulosAcademicos />
+
       <Idiomas />
     </>
   );

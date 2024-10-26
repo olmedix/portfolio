@@ -1,6 +1,19 @@
+.technology__list{
+    display: flex;
+    gap: 80px;
+
+}
+
+
+
+.tecno__img{
+    width: 80px;
+}
+
 .about__work,
 .about__studies,
-.about__language{
+.about__language,
+.about__technology{
     display: flex;
     justify-content: center;
     background-color: black;
@@ -8,21 +21,24 @@
 
 .container-work__title,
 .container-studies__title,
-.container-language__title{
+.container-language__title,
+.container-technology__title{
     display: flex;
     border-bottom: 1px solid white;
 }
 
 .work__icon,
 .studies__icon,
-.language__icon{
+.language__icon,
+.technology__icon{
     font-size: 4rem;
     color: var(--color-01);
 }
 
 .work__title,
 .studies__title,
-.language__title{
+.language__title,
+.technology__title{
     font-size: 3.1rem;
     margin: 0 auto;
     color: white;
@@ -51,7 +67,8 @@
 }
 
 .studies__list,
-.language__list{
+.language__list,
+.technology__list{
     list-style-type: none;
     margin: 25px 0;
 }
