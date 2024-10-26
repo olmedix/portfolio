@@ -1,3 +1,74 @@
-.about__container{
-    background-color: white;
+.about__work,
+.about__studies,
+.about__language{
+    display: flex;
+    justify-content: center;
+    background-color: black;
 }
+
+.container-work__title,
+.container-studies__title,
+.container-language__title{
+    display: flex;
+    border-bottom: 1px solid white;
+}
+
+.work__icon,
+.studies__icon,
+.language__icon{
+    font-size: 4rem;
+    color: var(--color-01);
+}
+
+.work__title,
+.studies__title,
+.language__title{
+    font-size: 3.1rem;
+    margin: 0 auto;
+    color: white;
+}
+
+.work__list{
+    list-style-type: none;
+    margin: 25px 0;
+}
+
+.list__work{
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.work__subtitle{
+    font-size: 2rem;
+    color: white;
+}
+
+.work__time,
+.work__description{
+    font-size: 1.5rem;
+    padding-left: 10px;
+    color: white;
+}
+
+.studies__list,
+.language__list{
+    list-style-type: none;
+    margin: 25px 0;
+}
+
+.list__item{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
