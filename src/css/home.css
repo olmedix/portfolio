@@ -13,11 +13,12 @@
     color: white;
     font-size: 4rem;
     display: inline-block;
-    margin:0 4rem;
+    margin:0 10rem;
 }
 
 .header__nav{
     display: inline-block;
+    margin-right: 10rem;
 }
 
 .header__nav a{
@@ -28,6 +29,7 @@
    justify-content: center;
    border-radius: 5px;
    font-weight: bold;
+   
 }
 
 .header__nav a:hover{
