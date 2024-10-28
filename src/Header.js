@@ -1,4 +1,4 @@
-import "./css/home.css";
+import "./home-components/home.css";
 
 export default function Header() {
   return (

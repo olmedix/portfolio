@@ -1,4 +1,4 @@
-import "../css/contacto.css";
+import "./contacto.css";
 import Header from "../Header";
 
 export default function Contacto() {

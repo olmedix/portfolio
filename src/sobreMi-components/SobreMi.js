@@ -1,4 +1,4 @@
-import "../css/sobreMi.css";
+import "./sobreMi.css";
 import Header from "../Header";
 import Tecnologias from "./Tecnologias";
 import { data } from "../data";

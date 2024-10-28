@@ -1,4 +1,4 @@
-import "../css/sobreMi.css";
+import "./sobreMi.css";
 import { FaLaptopCode } from "react-icons/fa";
 
 export default function Tecnologias() {
