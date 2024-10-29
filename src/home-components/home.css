@@ -16,27 +16,6 @@
     margin:0 10rem;
 }
 
-.header__nav{
-    display: inline-block;
-    margin-right: 10rem;
-}
-
-.header__nav a{
-    text-decoration: none;
-    color: white;
-    font-size: 2rem;
-    padding: 3rem;
-   justify-content: center;
-   border-radius: 5px;
-   font-weight: bold;
-   
-}
-
-.header__nav a:hover{
-    color: var(--color-01);
-}
-
-
 .body__container{
     display: flex;
     width: 100%;

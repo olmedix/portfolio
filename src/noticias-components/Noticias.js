@@ -1,12 +1,10 @@
 // import "./noticias.css";
-import Header from "../Header";
 import { Caja } from "../caja-components/Caja";
 import CajaContenedor from "../caja-components/Caja";
 
 export default function Noticias() {
   return (
     <>
-      <Header />
       <CajaContenedor>
         <Caja
           img="imgNoticias/tecno.png"

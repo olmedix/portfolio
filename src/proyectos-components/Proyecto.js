@@ -1,12 +1,10 @@
 import "./proyecto.css";
-import Header from "../Header";
 import CajaContenedor from "../caja-components/Caja";
 import { Caja } from "../caja-components/Caja";
 
 export default function Proyectos() {
   return (
     <>
-      <Header />
       <CajaContenedor>
         <Caja
           img="imgProyectos/portfolio.png"

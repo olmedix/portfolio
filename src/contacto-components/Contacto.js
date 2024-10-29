@@ -1,10 +1,8 @@
 import "./contacto.css";
-import Header from "../Header";
 
 export default function Contacto() {
   return (
     <>
-      <Header />
       <div className="contact__container">
         <h2 className="contact__title">
           ¿Quieres contactar conmigo? ¡Estaré encantado de conocerte!

@@ -1,5 +1,4 @@
 import "./sobreMi.css";
-import Header from "../Header";
 import Tecnologias from "./Tecnologias";
 import { data } from "../data";
 import { MdWork } from "react-icons/md";
@@ -9,7 +8,6 @@ import { FaAmericanSignLanguageInterpreting } from "react-icons/fa";
 export default function SobreMi() {
   return (
     <>
-      <Header />
       <Tecnologias />
 
       <section className="about__work">
