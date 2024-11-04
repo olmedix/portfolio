@@ -7,6 +7,7 @@ export default function CajaContenedor({ children }) {
 export function Caja({ img, imgTitle, title, text, link, linkText }) {
   return (
     <article className="box__container">
+      
       <img className="box__image" src={`./img/${img}`} alt={img} />
 
       <h3 className="box__image-title">{imgTitle}</h3>
@@ -15,9 +16,13 @@ export function Caja({ img, imgTitle, title, text, link, linkText }) {
       <div className="box__content-container">
         <p className="box__content">{text}</p>
       </div>
-      <a href={link} Target="_blank" className="box__button">
+
+      <div className="box__button">
+      <a href={link} Target="_blank" className="button__link">
         {linkText}
       </a>
+      </div>
+      
     </article>
   );
 }

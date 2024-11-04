@@ -2,24 +2,11 @@
     --color-01:#01eefe;
 }
 
-.header__container{
-    height: 6rem;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2.5rem;
-}
-
-.header__title{   
-    color: white;
-    font-size: 4rem;
-    display: inline-block;
-    margin:0 10rem;
-}
-
 .body__container{
     display: flex;
     width: 100%;
     color: white;
+    margin-top: 7rem;
 }
 
 .body__description{
@@ -90,6 +77,7 @@
 
 .body__image img{
     width: 70%;
+    max-width: 400px;
     margin: 0 20% 0 20%;
     box-shadow: 0 0 30px var(--color-01);
     border-radius: 50%;

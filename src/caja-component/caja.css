@@ -1,24 +1,29 @@
 .newsletter__container{
     width: 80%;
     min-width: 600px;
-    margin: 0 auto;
+    margin: 3rem auto;
     display: flex;
     justify-content: space-between;
     column-gap: 20px;
     row-gap: 80px;
     flex-wrap: wrap;
+    
 }
 
 .box__container{
     width: 25%;
-    min-width: 300px;
-    max-width: 600px;
+   
+    width: 400px;
+    padding: 4px;
     background-color: black;
+    box-shadow: 5px 5px 10px var(--color-01);
+    
 }
+
 
 .box__image{
     width: 100%;
-    border-radius: 35px;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
@@ -49,11 +54,16 @@
 }
 
 .box__button{
+    margin-bottom: 10px;
+}
+
+.button__link{
     width: 80%;
     font-size: 2rem;
     font-weight: bold;
     border-radius: 20px;
-    padding: 15px 50px;
+    padding: 5px 30px;
+   
     text-decoration: none;
     cursor: pointer;
     background-color: var(--color-01);

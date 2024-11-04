@@ -1,7 +1,23 @@
+.header__container{
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+.header__title{   
+    color: white;
+    font-size: 4rem;
+    display: inline-block;
+    margin:0 10rem;
+}
 
 .header__nav{
-    display: inline-block;
     margin-right: 10rem;
+}
+
+.nav__list{
+    display: flex;
 }
 
 .header__nav a{
@@ -12,7 +28,7 @@
    justify-content: center;
    border-radius: 5px;
    font-weight: bold;
-   
+   white-space: nowrap;
 }
 
 .header__nav a:hover{

@@ -1,11 +1,10 @@
 import "./App.css";
-import Header from "./Header";
-import Proyectos from "./proyectos-components/Proyecto";
-import Home from "./home-components/Home";
+import Proyectos from "./proyectos-component/Proyecto";
+import Home from "./home-component/Home";
 import Navegador from "./navegador-component/navegador";
-import SobreMi from "./sobreMi-components/SobreMi";
-import Contacto from "./contacto-components/Contacto";
-import Noticias from "./noticias-components/Noticias";
+import SobreMi from "./sobreMi-component/SobreMi";
+import Contacto from "./contacto-component/Contacto";
+import Noticias from "./noticias-component/Noticias";
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,7 +16,6 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
         <Navegador />
         <Routes>
           <Route path="/" element={<Home />} />
