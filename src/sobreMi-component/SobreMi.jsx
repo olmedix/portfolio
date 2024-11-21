@@ -1,6 +1,6 @@
 import "./sobreMi.css";
 import Tecnologias from "./Tecnologias";
-import { data } from "../data";
+import {trabajos} from "./trabajos"
 import { MdWork } from "react-icons/md";
 import { IoSchoolSharp } from "react-icons/io5";
 import { FaAmericanSignLanguageInterpreting } from "react-icons/fa";
@@ -32,7 +32,7 @@ export default function SobreMi() {
 }
 
 function Trabajos() {
-  let trabajos = data.map((trabajo) => (
+  let jobs = trabajos.map((trabajo) => (
     <li className="list__work" key={trabajo.id}>
       <h3 className="work__subtitle">{trabajo.title}</h3>
       <span className="work__time">
@@ -47,7 +47,7 @@ function Trabajos() {
     </li>
   ));
 
-  return <ul className="work__list">{trabajos}</ul>;
+  return <ul className="work__list">{jobs}</ul>;
 }
 
 function TitulosAcademicos() {
