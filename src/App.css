@@ -8,3 +8,9 @@ html{
    font-size: 10px;
    background-color: black;
 }
+
+.App{
+   margin: 20% 10%;
+   padding: 10px;
+   box-shadow: 0 0 10px 20px var(--color-01);
+}

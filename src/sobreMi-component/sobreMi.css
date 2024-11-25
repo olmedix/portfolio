@@ -4,8 +4,6 @@
 
 }
 
-
-
 .tecno__img{
     width: 80px;
 }
@@ -81,6 +79,15 @@
     text-decoration: none;
 }
 
+/* Ajuste para pantallas más pequeñas (menor a 1360px) */
+@media (max-width: 1360px) {
+    .technology__list {
+        display: grid; /* Cambia de flexbox a grid */
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+        gap: 20px; /* Espaciado más reducido entre elementos */
+    }
+
+}
 
 
 

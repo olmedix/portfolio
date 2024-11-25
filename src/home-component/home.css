@@ -78,7 +78,7 @@
 .body__image img{
     width: 70%;
     max-width: 400px;
-    margin: 0 20% 0 20%;
+    margin: 0 20% 20% 20%;
     box-shadow: 0 0 30px var(--color-01);
     border-radius: 50%;
     object-fit: cover;

@@ -12,7 +12,7 @@
 
 .box__container{
     width: 25%;
-   
+    margin-bottom: 100px;
     width: 400px;
     padding: 4px;
     background-color: black;

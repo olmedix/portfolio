@@ -34,3 +34,64 @@
 .header__nav a:hover{
     color: var(--color-01);
 }
+
+/* Estilo del botón hamburguesa */
+.menu-button {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-button div {
+    width: 50px;
+    height: 7px;
+    background-color: white;
+    border-radius: 2px;
+  }
+  
+  /* Menú hamburguesa */
+  .hamburger-menu {
+    position: absolute;
+    top: 22rem; /* Ajusta según la altura de tu header */
+    right: 160px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+  
+  .hamburger-menu .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .hamburger-menu a {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .hamburger-menu a:hover {
+    color: var(--color-01);
+  }
+  
+  /* Mostrar el botón hamburguesa en pantallas pequeñas */
+  @media (max-width: 1360px) {
+    .menu-button {
+      display: flex;
+    }
+  
+    .header__nav {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1360px){
+    .hamburger-menu{
+        display: none;
+    }
+  }
+  
