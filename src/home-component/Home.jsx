@@ -54,11 +54,14 @@ export default function Home() {
           </div>
     
           <div className="body__image">
+            <div className="image__container">
             <img
               src="img/imagen-01.jpg"
               alt="Imagen de Juanjo Olmedo"
               title="Juanjo"
             ></img>
+            </div>
+            
           </div>
         </main>
       );
