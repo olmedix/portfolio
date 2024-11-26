@@ -41,6 +41,8 @@
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    color: white;
+    font-size: 5rem;
   }
   
   .menu-button div {
@@ -52,13 +54,24 @@
   
   /* Menú hamburguesa */
   .hamburger-menu {
-    position: absolute;
-    top: 22rem; /* Ajusta según la altura de tu header */
-    right: 160px;
-    background-color: white;
+    position: absolute; /* Posición relativa al contenedor más cercano con 'position: relative' */
+    top: 100%; /* Justo debajo del botón */
+    right: 17%;
+    background-color: white; /* Fondo del menú */
     padding: 1rem;
     border-radius: 5px;
-    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    width: max-content; /* Ajusta el ancho según el contenido */
+  }
+
+  .menuBoton{
+    position: relative;
+  }
+
+  .menu-button {
+    position: relative; /* Para que el menú se posicione respecto a este botón */
+    cursor: pointer; /* Estilo del cursor */
   }
   
   .hamburger-menu .nav__list {
@@ -94,4 +107,6 @@
         display: none;
     }
   }
+
+
   

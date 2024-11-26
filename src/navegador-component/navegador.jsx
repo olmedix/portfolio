@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "./navegador.css";
 import { Link } from "react-router-dom";
+import { TiThMenu } from "react-icons/ti";
+
+
 
 export default function Navegador() {
   const [menuOpen, setMenuOpen] = useState(false); // Estado para el menú
@@ -14,10 +17,9 @@ export default function Navegador() {
       <h1 className="header__title">Portfolio</h1>
 
       {/* Botón de menú hamburguesa */}
+      <div className="menuBoton">
       <div className="menu-button" onClick={toggleMenu}>
-        <div></div>
-        <div></div>
-        <div></div>
+      <TiThMenu />
       </div>
 
       {/* Menú hamburguesa */}
@@ -32,6 +34,8 @@ export default function Navegador() {
           </ul>
         </nav>
       )}
+      </div>
+
 
       {/* Menú de navegación principal */}
       <nav className="header__nav">
