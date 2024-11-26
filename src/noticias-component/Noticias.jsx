@@ -23,7 +23,6 @@ export default function Noticias() {
           },
         });
         setNewsletter(response.data.results);
-        console.log(response.data.results);
       } catch (err) {
         console.error(err);
       } finally {

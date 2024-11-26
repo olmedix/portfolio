@@ -6,10 +6,10 @@ import { TiThMenu } from "react-icons/ti";
 
 
 export default function Navegador() {
-  const [menuOpen, setMenuOpen] = useState(false); // Estado para el menú
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen); // Alternar entre abierto y cerrado
+    setMenuOpen(!menuOpen);
   };
 
   return (

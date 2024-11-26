@@ -12,8 +12,8 @@ export default function Tecnologias() {
     "mysql.svg",
   ];
 
-  const listaTecno = tecnologias.map((tecno, index) => (
-    <li className="list__tecno" key={index}>
+  const listaTecno = tecnologias.map((tecno) => (
+    <li className="list__tecno">
       <img className="tecno__img" src={"./img/" + tecno} alt={tecno} />
     </li>
   ));

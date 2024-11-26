@@ -26,7 +26,7 @@ export function Caja({ category,img, title, text, link, linkText }) {
         <p className="box__content">
         {readMore?text: text.substring(0,100)+"..."}
         <button className={readMore?"on":"off"} onClick={toggleReadMore} >
-          {readMore?"show less":"read more"}
+          {readMore?"Ver menos":"Leer más"}
         </button>
         </p>
         
