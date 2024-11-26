@@ -3,6 +3,7 @@
 }
 
 .body__container{
+    background-color: black;
     display: flex;
     width: 100%;
     color: white;

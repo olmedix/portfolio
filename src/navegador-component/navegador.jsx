@@ -41,7 +41,7 @@ export default function Navegador() {
       <nav className="header__nav">
         <ul className="nav__list">
           <li><Link to="/" onClick={toggleMenu}>Inicio</Link></li>
-          <li><Link to="/sobre mi" onClick={toggleMenu}>Sobre mí</Link></li>
+          <li><Link to="/sobre-mi" onClick={toggleMenu}>Sobre mí</Link></li>
           <li><Link to="/proyectos" onClick={toggleMenu}>Proyectos</Link></li>
           <li><Link to="/contacto" onClick={toggleMenu}>Contacto</Link></li>
           <li><Link to="/noticias" onClick={toggleMenu}>Noticias</Link></li>

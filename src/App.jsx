@@ -19,11 +19,11 @@ function App() {
         <Navegador />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sobre mi" element={<SobreMi />} />
+          <Route path="/sobre-mi" element={<SobreMi />} />
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/noticias" element={<Noticias />} />
-          <Route path="*" element={<Navigate replate to="/" />} />
+          <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
       </Router>
     </div>

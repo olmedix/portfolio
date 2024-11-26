@@ -40,7 +40,7 @@ export default function Proyectos() {
         projects.map(dato =>(
        
         <Caja key={dato.id}
-        img= {`imgProyectos/${dato.imagen}`} 
+        img= {`/img/imgProyectos/${dato.imagen}`} 
         imgTitle= {dato.tituloImagen}
         title= {dato.titulo}
         text = {dato.contenido}

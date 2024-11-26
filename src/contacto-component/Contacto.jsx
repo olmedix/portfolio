@@ -2,7 +2,6 @@ import "./contacto.css";
 
 export default function Contacto() {
   return (
-    <>
       <div className="contact__container">
         <h2 className="contact__title">
           ¿Quieres contactar conmigo? ¡Estaré encantado de conocerte!
@@ -71,6 +70,5 @@ export default function Contacto() {
           </form>
         </fieldset>
       </div>
-    </>
   );
 }
