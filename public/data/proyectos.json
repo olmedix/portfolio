@@ -16,6 +16,15 @@
         "contenido": "Primeros pasos en el mundo de React, en este trabajo se han puesto en uso los conocimientos de React. Se ha utilizado HTML5 y CSS3. Si quieres ver cómo se ha diseñado este proyecto te invito a visitar mi Github.",
         "github": "https://github.com/olmedix"
 
+    },
+    {
+        "id":3,
+        "imagen":"curriculum.png",
+        "tituloImagen":"CV con bootstrap",
+        "titulo": "CURRICULUM",
+        "contenido": "Un proyecto donde la finalidad es la de poner en práctica los conocimientos de Bootstrap. Además el objetivo era que se viese bien en dispositivos móviles. Tiene múltiples enlaces a mi perfil y añade la posibilidad de descargar mi CV en formato pdf.",
+        "github": "https://github.com/olmedix"
+
     }
 
     
