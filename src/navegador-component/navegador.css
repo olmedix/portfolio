@@ -23,6 +23,7 @@
 
 .nav__list{
     display: flex;
+    text-decoration: none;
 }
 
 .header__nav a{
@@ -59,15 +60,14 @@
   
   /* Menú hamburguesa */
   .hamburger-menu {
-    position: absolute; /* Posición relativa al contenedor más cercano con 'position: relative' */
-    top: 100%; /* Justo debajo del botón */
+    position: absolute;
+    top: 100%;
     right: 17%;
-    background-color: white; /* Fondo del menú */
+    background-color: white;
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    width: max-content; /* Ajusta el ancho según el contenido */
+    z-index: 1000;
+    width: max-content;
   }
 
   .menuBoton{
@@ -75,8 +75,8 @@
   }
 
   .menu-button {
-    position: relative; /* Para que el menú se posicione respecto a este botón */
-    cursor: pointer; /* Estilo del cursor */
+    position: relative;
+    cursor: pointer;
   }
   
   .hamburger-menu .nav__list {
@@ -96,7 +96,6 @@
     color: var(--color-01);
   }
   
-  /* Mostrar el botón hamburguesa en pantallas pequeñas */
   @media (max-width: 1360px) {
     .menu-button {
       display: flex;
