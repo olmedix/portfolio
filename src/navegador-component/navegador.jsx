@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./navegador.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { TiThMenu } from "react-icons/ti";
 
 
@@ -26,11 +26,11 @@ export default function Navegador() {
       {menuOpen && (
         <nav className="hamburger-menu">
           <ul className="nav__list">
-            <li><Link to="/" onClick={toggleMenu}>Inicio</Link></li>
-            <li><Link to="/sobre mi" onClick={toggleMenu}>Sobre mí</Link></li>
-            <li><Link to="/proyectos" onClick={toggleMenu}>Proyectos</Link></li>
-            <li><Link to="/contacto" onClick={toggleMenu}>Contacto</Link></li>
-            <li><Link to="/noticias" onClick={toggleMenu}>Noticias</Link></li>
+            <li><NavLink className={({ isActive }) => (isActive ? "active" : "")} to="/" onClick={toggleMenu}>Inicio</NavLink></li>
+            <li><NavLink className={({ isActive }) => (isActive ? "active" : "")} to="/sobre mi" onClick={toggleMenu}>Sobre mí</NavLink></li>
+            <li><NavLink className={({ isActive }) => (isActive ? "active" : "")} to="/proyectos" onClick={toggleMenu}>Proyectos</NavLink></li>
+            <li><NavLink className={({ isActive }) => (isActive ? "active" : "")} to="/contacto" onClick={toggleMenu}>Contacto</NavLink></li>
+            <li><NavLink className={({ isActive }) => (isActive ? "active" : "")} to="/noticias" onClick={toggleMenu}>Noticias</NavLink></li>
           </ul>
         </nav>
       )}
@@ -40,11 +40,11 @@ export default function Navegador() {
       {/* Menú de navegación principal */}
       <nav className="header__nav">
         <ul className="nav__list">
-          <li><Link to="/" onClick={toggleMenu}>Inicio</Link></li>
-          <li><Link to="/sobre-mi" onClick={toggleMenu}>Sobre mí</Link></li>
-          <li><Link to="/proyectos" onClick={toggleMenu}>Proyectos</Link></li>
-          <li><Link to="/contacto" onClick={toggleMenu}>Contacto</Link></li>
-          <li><Link to="/noticias" onClick={toggleMenu}>Noticias</Link></li>
+          <li><NavLink to="/" onClick={toggleMenu}>Inicio</NavLink></li>
+          <li><NavLink to="/sobre-mi" onClick={toggleMenu}>Sobre mí</NavLink></li>
+          <li><NavLink to="/proyectos" onClick={toggleMenu}>Proyectos</NavLink></li>
+          <li><NavLink to="/contacto" onClick={toggleMenu}>Contacto</NavLink></li>
+          <li><NavLink to="/noticias" onClick={toggleMenu}>Noticias</NavLink></li>
         </ul>
       </nav>
     </header>

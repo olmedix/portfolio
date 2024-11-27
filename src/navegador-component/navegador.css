@@ -12,6 +12,11 @@
     margin:0 10rem;
 }
 
+.active {
+  font-weight: bold;
+  background-color: var(--color-01);
+}
+
 .header__nav{
     margin-right: 10rem;
 }
