@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Caja } from "../caja-component/Caja";
 import CajaContenedor from "../caja-component/Caja";
-import Loading from "./Loading";
+import Loading from "../components/Loading";
 import axios from "axios";
+import NoComponent from "../components/NoComponent";
 
 export default function Noticias() {
   const [newsletter, setNewsletter] = useState([]);
@@ -62,7 +63,7 @@ export default function Noticias() {
             />
           ))
         ) : (
-          !isLoading && <p>No se encontraron noticias.</p>
+          !isLoading && <NoComponent name={"noticias"} />
         )}
       </CajaContenedor>
     </div>

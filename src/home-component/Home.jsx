@@ -56,7 +56,7 @@ export default function Home() {
           <div className="body__image">
             <div className="image__container">
             <img
-              src="img/juanjo.pn"
+              src="img/juanjo.png"
               alt="Imagen de Juanjo Olmedo"
               title="Juanjo"
             ></img>

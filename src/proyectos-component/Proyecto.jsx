@@ -1,7 +1,8 @@
 import CajaContenedor from "../caja-component/Caja";
 import { Caja } from "../caja-component/Caja";
 import React, { useEffect,useState } from 'react';
-import NoProyectos from "./NoProyectos";
+import NoComponent from "../components/NoComponent";
+import Loading from "../components/Loading";
 
 
 export default function Proyectos() {
@@ -12,32 +13,29 @@ export default function Proyectos() {
   const proyectos = async () =>{
 
     try {
-      
         const response = await fetch('/data/proyectos.json');
-
         const data = await response.json();
-      
-        setProjects(data);
-        setLoading(true);
-        
+        setProjects(data); 
     } catch (error) {
-      setLoading(false);
       console.error(error);
+    }finally{
+      setLoading(false);
     }
-  
   }
-
   useEffect(() => {
       proyectos();
 }, []);
 
+
   return (
 
-    !loading ? <NoProyectos/> :
     <div>
       <CajaContenedor>
-      {
-        projects.map(dato =>(
+
+      {loading && <Loading/>}  
+      
+      {projects.length > 0 ? (
+      projects.map(dato =>(
        
         <Caja key={dato.id}
         img= {`/img/imgProyectos/${dato.imagen}`} 
@@ -47,7 +45,10 @@ export default function Proyectos() {
         link = {dato.github}
         linkText="Ver código"
       />
-    ))}
+    ))) : 
+    (
+      !loading && <NoComponent name={"proyectos"}/>
+    )}
             
       </CajaContenedor>
     </div>

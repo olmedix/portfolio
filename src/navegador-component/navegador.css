@@ -14,7 +14,7 @@
 
 .active {
   font-weight: bold;
-  background-color: rgb(37, 37, 76);
+  background-color: rgb(114, 194, 225);
 }
 
 .header__nav{
@@ -83,6 +83,10 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+
+  li{
+    list-style: none;
   }
   
   .hamburger-menu a {
