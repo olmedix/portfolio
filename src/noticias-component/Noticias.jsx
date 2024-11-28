@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Caja } from "../caja-component/Caja";
 import CajaContenedor from "../caja-component/Caja";
+import Loading from "./Loading";
 import axios from "axios";
 
 export default function Noticias() {
@@ -9,7 +10,7 @@ export default function Noticias() {
   const [change, setChange] = useState("");
 
   const apiKey = "pub_60518d72f7742373e75d808ffe354ca9781e9";
-  const url = "https://newsdata.io/api/1/news?apikey=pub_60518d72f7742373e75d808ffe354ca9781e9&q=technology ";
+  const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=technology `;
   
 
   useEffect(() => {
@@ -46,13 +47,13 @@ export default function Noticias() {
       />
 
       <CajaContenedor>
-        {isLoading && <p>Cargando noticias...</p>}
+        {isLoading && <Loading/>}
 
         {newsletter.length > 0 ? (
           newsletter.filter((noticia) => noticia.title.toLowerCase().includes(change.toLowerCase())).map((noticia) => (
             <Caja
               category={noticia.category}
-              img={noticia.image_url}
+              img={noticia.image_url || "/img/imgNoticias/NoImage.jpg"}
               imgTitle={noticia.title}
               title={noticia.title}
               text={noticia.description || "Sin descripción"}

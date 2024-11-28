@@ -14,7 +14,7 @@
 
 .active {
   font-weight: bold;
-  background-color: var(--color-01);
+  background-color: rgb(37, 37, 76);
 }
 
 .header__nav{

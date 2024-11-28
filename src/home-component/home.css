@@ -84,18 +84,21 @@
     max-width: 400px;
     min-width: 200px;
     margin: 0 20% 20% 20%;
-    box-shadow: 0 0 15px  8px var(--color-01);
+    box-shadow: 0 0 15px  5px var(--color-01);
     border-radius: 50%;
     overflow: hidden;
     aspect-ratio: 1; 
+    background-color: white;
 }
 
 img{
     width: 100%;
-    height: 100%; /* Asegura que la imagen llene el contenedor */
-    object-fit: cover; /* Mantiene las proporciones sin deformar la imagen */
+    height: 100%; 
+    object-fit: cover;
     display: block;
+    object-position: top;
 }
+
 
 
   
