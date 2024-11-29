@@ -34,7 +34,7 @@ export default function Noticias() {
     };
 
     fetchNoticias();
-  }, [category]);
+  }, [url,category]);
   
  
   
