@@ -13,6 +13,7 @@ export default function Proyectos() {
   const proyectos = async () =>{
 
     try {
+      setLoading(true);
         const response = await fetch('/data/proyectos.json');
         const data = await response.json();
         setProjects(data); 

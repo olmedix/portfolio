@@ -9,9 +9,10 @@ export default function Noticias() {
   const [newsletter, setNewsletter] = useState([]);
   const [isLoading, setIsLoading] = useState(true); 
   const [change, setChange] = useState("");
+  const [category, setCategory] = useState("technology");
 
   const apiKey = "pub_60518d72f7742373e75d808ffe354ca9781e9";
-  const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=technology `;
+  const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=${category} `;
   
 
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function Noticias() {
         const response = await axios.get(url, {
           params: {
             apikey: apiKey,
-            category: "technology",
+            category: category,
           },
         });
         setNewsletter(response.data.results);
@@ -33,7 +34,7 @@ export default function Noticias() {
     };
 
     fetchNoticias();
-  }, []);
+  }, [category]);
   
  
   
@@ -47,8 +48,21 @@ export default function Noticias() {
         onChange={e => setChange(e.target.value)}
       />
 
+      <select name="wordSearch" 
+              id="wordSearch"
+              style={{ width: "15%", padding: "10px", margin: "10px auto", borderRadius:"10px" }}
+              onChange={e => setCategory(e.target.value)}    
+          >
+        <option value="technology">Tecnología</option>
+        <option value="science">Ciencia</option>
+        <option value="health">Salud</option>
+        <option value="business">Negocios</option>
+        <option value="sports">Deportes</option>
+      </select>
+
       <CajaContenedor>
         {isLoading && <Loading/>}
+
 
         {newsletter.length > 0 ? (
           newsletter.filter((noticia) => noticia.title.toLowerCase().includes(change.toLowerCase())).map((noticia) => (
