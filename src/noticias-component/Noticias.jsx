@@ -9,22 +9,16 @@ export default function Noticias() {
   const [newsletter, setNewsletter] = useState([]);
   const [isLoading, setIsLoading] = useState(true); 
   const [change, setChange] = useState("");
-  const [category, setCategory] = useState("technology");
+  const [category, setCategory] = useState("all");
 
   const apiKey = "pub_60518d72f7742373e75d808ffe354ca9781e9";
-  const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=${category} `;
-  
+  const url = `https://newsdata.io/api/1/news?apikey=${apiKey}&q=${category}&language=es`;
 
   useEffect(() => {
     const fetchNoticias = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get(url, {
-          params: {
-            apikey: apiKey,
-            category: category,
-          },
-        });
+        const response = await axios.get(url);
         setNewsletter(response.data.results);
       } catch (err) {
         console.error(err);
@@ -34,7 +28,7 @@ export default function Noticias() {
     };
 
     fetchNoticias();
-  }, [url,category]);
+  }, [category]);
   
  
   
@@ -53,6 +47,7 @@ export default function Noticias() {
               style={{ width: "15%", padding: "10px", margin: "10px auto", borderRadius:"10px" }}
               onChange={e => setCategory(e.target.value)}    
           >
+        <option value="all">Categorías</option>
         <option value="technology">Tecnología</option>
         <option value="science">Ciencia</option>
         <option value="health">Salud</option>
@@ -61,7 +56,7 @@ export default function Noticias() {
       </select>
 
       <CajaContenedor>
-        {isLoading && <Loading/>}
+        {isLoading && <Loading name={"noticias"}/>}
 
 
         {newsletter.length > 0 ? (

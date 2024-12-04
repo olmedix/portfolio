@@ -11,7 +11,7 @@ export default function Contacto() {
           <legend className="contact__legend">Información de contacto</legend>
 
           <form className="contact__form">
-            <label className="contact__label" for="nombre">
+            <label className="contact__label" htmlFor="nombre">
               Nombre (requerido)
             </label>
             <input
@@ -22,7 +22,7 @@ export default function Contacto() {
               required
             />
 
-            <label className="contact__label" for="email">
+            <label className="contact__label" htmlFor="email">
               Email (requerido)
             </label>
             <input
@@ -33,7 +33,7 @@ export default function Contacto() {
               required
             />
 
-            <label className="contact__label" for="telf">
+            <label className="contact__label" htmlFor="telf">
               Número de teléfono
             </label>
             <input
@@ -45,7 +45,7 @@ export default function Contacto() {
               placeholder="+34123456789"
             />
 
-            <label className="contact__label" for="asunto">
+            <label className="contact__label" htmlFor="asunto">
               Asunto
             </label>
             <input
@@ -55,7 +55,7 @@ export default function Contacto() {
               id="asunto"
             />
 
-            <label className="contact__label" for="mensaje">
+            <label className="contact__label" htmlFor="mensaje">
               Mensaje
             </label>
             <textarea

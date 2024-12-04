@@ -33,7 +33,7 @@ export default function Proyectos() {
     <div>
       <CajaContenedor>
 
-      {loading && <Loading/>}  
+      {loading && <Loading name={"proyectos"}/>}  
       
       {projects.length > 0 ? (
       projects.map(dato =>(

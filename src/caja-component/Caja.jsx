@@ -24,16 +24,19 @@ export function Caja({ category,img, title, text, link, linkText }) {
       <h4 className="box__content-title">{title}</h4>
       <div className="box__content-container">
         <p className="box__content">
-        {readMore?text: text.substring(0,100)+"..."}
-        <button className={readMore?"on":"off"} onClick={toggleReadMore} >
-          {readMore?"Ver menos":"Leer más"}
-        </button>
+        {readMore || text.length < 100 ? text : text.substring(0, 100) + "..."}
+
+        {text.length > 100 && (
+          <button className={readMore ? "on" : "off"} onClick={toggleReadMore}>
+            {readMore ? "Ver menos" : "Leer más"}
+          </button>
+        )}
         </p>
         
       </div>
 
       <div className="box__button">
-      <a href={link} Target="_blank" className="button__link">
+      <a href={link} target="_blank" className="button__link">
         {linkText}
       </a>
       </div>
