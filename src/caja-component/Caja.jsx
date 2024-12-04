@@ -36,7 +36,7 @@ export function Caja({ category,img, title, text, link, linkText }) {
       </div>
 
       <div className="box__button">
-      <a href={link} target="_blank" className="button__link">
+      <a href={link} target="_blank" className="button__link" rel="noreferrer">
         {linkText}
       </a>
       </div>
