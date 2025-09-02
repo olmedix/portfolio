@@ -1,29 +1,40 @@
 [
     {
         "id":1,
-        "imagen": "proyectoServidor.png" ,
-        "tituloImagen": "Trabajo con base de datos",
-        "titulo": "proyecto CRUD",
-        "contenido": "En este proyecto se busca el poner en práctica los conocimientos de PHP y de trabajar nuevamente con las BBDD. Se ha buscado el poder trabajar con creación, consulta, actualización y eliminación de registros.",
-        "github": "https://github.com/olmedix/proyecto-CRUD"
+        "imagen": "Hotel Darder.png" ,
+        "tituloImagen": "Sistema de reservas de Hotel y Extras",
+        "titulo": "Hotel Emili Darder",
+        "contenido": "Aplicación web de reservas hoteleras con gestión de usuarios, control de overbooking, pasarela de pago y servicios extra descargables en PDF. Proyecto integrador donde aplico todo lo aprendido en mi Grado Superior de DAW.",
+        "githubFront": "https://github.com/olmedix/front-hotelDarder",
+        "githubBack": "https://github.com/olmedix/laravel-HotelEmiliDarder",
+        "link": "https://olmedix.es"
           
     },
     {
         "id":2,
+        "imagen": "proyectoServidor.png" ,
+        "tituloImagen": "Trabajo con base de datos",
+        "titulo": "proyecto CRUD",
+        "contenido": "En este proyecto se busca el poner en práctica los conocimientos de PHP y de trabajar nuevamente con las BBDD. Se ha buscado el poder trabajar con creación, consulta, actualización y eliminación de registros.",
+        "githubFront": "https://github.com/olmedix/proyecto-CRUD"
+          
+    },
+    {
+        "id":3,
         "imagen":"portfolio.png",
         "tituloImagen":"Portfolio personal",
         "titulo": "PORTFOLIO",
         "contenido": "Primeros pasos en el mundo de React, en este trabajo se han puesto en uso los conocimientos de React. Se ha utilizado HTML5 y CSS3. Si quieres ver cómo se ha diseñado este proyecto te invito a visitar mi Github.",
-        "github": "https://github.com/olmedix/portfolio"
+        "githubFront": "https://github.com/olmedix/portfolio"
 
     },
     {
-        "id":3,
+        "id":4,
         "imagen":"curriculum.png",
         "tituloImagen":"CV con bootstrap",
         "titulo": "CURRICULUM",
         "contenido": "Un proyecto donde la finalidad es la de poner en práctica los conocimientos de Bootstrap. Además el objetivo era que se viese bien en dispositivos móviles. Tiene múltiples enlaces a mi perfil y añade la posibilidad de descargar mi CV en formato pdf.",
-        "github": "https://github.com/olmedix/curriculum"
+        "githubFront": "https://github.com/olmedix/curriculum"
 
     }
 

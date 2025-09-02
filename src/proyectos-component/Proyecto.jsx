@@ -1,56 +1,48 @@
 import CajaContenedor from "../caja-component/Caja";
 import { Caja } from "../caja-component/Caja";
-import React, { useEffect,useState } from 'react';
+import React, { useEffect, useState } from "react";
 import NoComponent from "../components/NoComponent";
 import Loading from "../components/Loading";
 
-
 export default function Proyectos() {
+  const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const[projects,setProjects] = useState([]);
-  const[loading,setLoading] = useState(true);
-
-  const proyectos = async () =>{
-
+  const proyectos = async () => {
     try {
       setLoading(true);
-        const response = await fetch('/data/proyectos.json');
-        const data = await response.json();
-        setProjects(data); 
+      const response = await fetch("/data/proyectos.json");
+      const data = await response.json();
+      setProjects(data);
     } catch (error) {
       console.error(error);
-    }finally{
+    } finally {
       setLoading(false);
     }
-  }
+  };
   useEffect(() => {
-      proyectos();
-}, []);
-
+    proyectos();
+  }, []);
 
   return (
-
     <div>
       <CajaContenedor>
+        {loading && <Loading name={"proyectos"} />}
 
-      {loading && <Loading name={"proyectos"}/>}  
-      
-      {projects.length > 0 ? (
-      projects.map(dato =>(
-       
-        <Caja key={dato.id}
-        img= {`/img/imgProyectos/${dato.imagen}`} 
-        imgTitle= {dato.tituloImagen}
-        title= {dato.titulo}
-        text = {dato.contenido}
-        link = {dato.github}
-        linkText="Ver código"
-      />
-    ))) : 
-    (
-      !loading && <NoComponent name={"proyectos"}/>
-    )}
-            
+        {projects.length > 0
+          ? projects.map((dato) => (
+              <Caja
+                key={dato.id}
+                img={`/img/imgProyectos/${dato.imagen}`}
+                imgTitle={dato.tituloImagen}
+                title={dato.titulo}
+                text={dato.contenido}
+                link={dato.githubFront}
+                linkText="Ver código"
+                web={dato.link}
+              />
+            ))
+          : !loading && <NoComponent name={"proyectos"} />}
       </CajaContenedor>
     </div>
   );

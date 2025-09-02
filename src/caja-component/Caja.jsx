@@ -5,18 +5,15 @@ export default function CajaContenedor({ children }) {
   return <div className="newsletter__container">{children}</div>;
 }
 
-export function Caja({ category,img, title, text, link, linkText }) {
- 
+export function Caja({ category, img, title, text, link, linkText, web }) {
   const [readMore, setReadMore] = useState(false);
 
-  function toggleReadMore(){
+  function toggleReadMore() {
     setReadMore(!readMore);
   }
- 
- 
+
   return (
     <article className="box__container">
-      
       <img className="box__image" src={img} alt={title} />
 
       <h3 className="box__image-title">{category}</h3>
@@ -24,23 +21,44 @@ export function Caja({ category,img, title, text, link, linkText }) {
       <h4 className="box__content-title">{title}</h4>
       <div className="box__content-container">
         <p className="box__content">
-        {readMore || text.length < 100 ? text : text.substring(0, 100) + "..."}
+          {readMore || text.length < 100
+            ? text
+            : text.substring(0, 100) + "..."}
 
-        {text.length > 100 && (
-          <button className={readMore ? "on" : "off"} onClick={toggleReadMore}>
-            {readMore ? "Ver menos" : "Leer más"}
-          </button>
-        )}
+          {text.length > 100 && (
+            <button
+              className={readMore ? "on" : "off"}
+              onClick={toggleReadMore}
+            >
+              {readMore ? "Ver menos" : "Leer más"}
+            </button>
+          )}
         </p>
-        
+      </div>
+
+      <div className="box__web">
+        {web && (
+          <a
+            href={web}
+            target="_blank"
+            className="button__web"
+            rel="noreferrer"
+          >
+            Visitar
+          </a>
+        )}
       </div>
 
       <div className="box__button">
-      <a href={link} target="_blank" className="button__link" rel="noreferrer">
-        {linkText}
-      </a>
+        <a
+          href={link}
+          target="_blank"
+          className="button__link"
+          rel="noreferrer"
+        >
+          {linkText}
+        </a>
       </div>
-      
     </article>
   );
 }
