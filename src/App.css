@@ -1,18 +1,22 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
+/* Reset ligero y tipografía */
+*{ box-sizing: border-box; margin:0; padding:0; }
 
 html{
-   font-size: 10px;
-   background-color: black;
-   background: linear-gradient(to bottom, black 50%, var(--color-01) 100%);
+  /* El bg real lo maneja App.css; aquí solo tamaño fuente y scroll suave */
+  font-size: 10px;
+  scroll-behavior: smooth;
 }
 
-
-.App{
-   margin: 20% 10%;
-   padding: 10px;
-   box-shadow: 0 0 10px 20px var(--color-01);
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* color y fondo se aplican en App.css con las variables */
 }
+
+code{
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.section { scroll-margin-top: 88px; }

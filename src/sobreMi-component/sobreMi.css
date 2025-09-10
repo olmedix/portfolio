@@ -1,98 +1,225 @@
-.technology__list{
-    display: flex;
-    gap: 80px;
+/* ===== Sección: Tecnologías, Experiencia, Estudios e Idiomas ===== */
 
-}
-
-.tecno__img{
-    width: 80px;
-}
-
+/* contenedores de sección (centrado, sin forzar fondo) */
+.about__technology,
 .about__work,
 .about__studies,
-.about__language,
-.about__technology{
-    display: flex;
-    justify-content: center;
-    background-color: black;
+.about__language{
+  display:flex;
+  justify-content:center;
+  padding: 48px 0;
 }
 
+/* wrapper interno si lo usas (ajústalo a tu markup) */
+.about__container-technology,
+.about__container-work,
+.about__container-studies,
+.about__container-language{
+  width: min(1100px, 92vw);
+  padding: 0 1rem;
+}
+
+/* ===== Títulos de sección con icono ===== */
+.container-technology__title,
 .container-work__title,
 .container-studies__title,
-.container-language__title,
-.container-technology__title{
-    display: flex;
-    border-bottom: 1px solid white;
+.container-language__title{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  padding-bottom:.8rem;
+  margin-bottom: 1.2rem;
+  border-bottom:1px solid var(--glass-brd);
 }
 
+.technology__icon,
 .work__icon,
 .studies__icon,
-.language__icon,
-.technology__icon{
-    font-size: 4rem;
-    color: var(--color-01);
+.language__icon{
+  font-size: clamp(20px, 3.6vw, 28px);
+  color: var(--accent);
 }
 
+.technology__title,
 .work__title,
 .studies__title,
-.language__title,
-.technology__title{
-    font-size: 3.1rem;
-    margin: 0 auto;
-    color: white;
+.language__title{
+  font-size: clamp(20px, 3.6vw, 28px);
+  margin:0;
+  color: var(--text);
 }
 
-.work__list{
-    list-style-type: none;
-    margin: 25px 0;
-}
+/* ===== Tecnologías (logos/chips) ===== */
+/* ========== TECNOLOGÍAS — Tarjetas 3D + Glow ========== */
 
-.list__work{
-    margin-bottom: 10px;
-    text-decoration: none;
-}
-
-.work__subtitle{
-    font-size: 2rem;
-    color: white;
-}
-
-.work__time,
-.work__description{
-    font-size: 1.5rem;
-    padding-left: 10px;
-    color: white;
-}
-
-.studies__list,
-.language__list,
+/* Grid más aireado y centrado */
 .technology__list{
-    list-style-type: none;
-    margin: 25px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 18px;
+  padding: 0;
+  margin: 16px 0 0 0;
+  place-items: center;
+  list-style: none;
 }
 
+/* Tarjeta “glass” para cada logo */
+.list__tecno{
+  position: relative;
+  width: clamp(120px, 18vw, 160px);
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  border: 1px solid var(--glass-brd);
+  background: var(--glass-bg);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+
+  /* 3D suave */
+  transform-style: preserve-3d;
+  transition: transform .35s ease, box-shadow .35s ease, filter .35s ease;
+}
+
+.list__tecno:hover{
+  transform: translateY(-6px) rotateX(6deg) rotateY(-6deg);
+  box-shadow: 0 16px 40px #00000099, 0 0 0 6px #00E5FF22;
+}
+
+/* Glow animado en el borde */
+.list__tecno::before{
+  content:"";
+  position:absolute; inset:-2px;
+  background:
+    conic-gradient(from 0deg,
+      transparent 0 20%,
+      var(--accent) 20% 40%,
+      transparent 40% 60%,
+      var(--violet) 60% 80%,
+      transparent 80% 100%);
+  filter: blur(10px) saturate(120%);
+  animation: spin 6s linear infinite;
+  z-index: 0;
+  opacity: .45;
+}
+
+/* Brillo “shine” diagonal */
+.list__tecno::after{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(120deg, transparent 35%, #ffffff22 50%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform .6s ease;
+  z-index: 1;
+}
+.list__tecno:hover::after{ transform: translateX(120%); }
+
+/* El logo en sí, más grande y con profundidad */
+.tecno__img{
+  position: relative;
+  z-index: 2;
+  width: clamp(64px, 10vw, 96px);
+  height: auto;
+  filter: drop-shadow(0 6px 14px #00000066) drop-shadow(0 0 10px #00E5FF33);
+  transform: translateZ(20px);
+  transition: transform .35s ease, filter .35s ease;
+}
+.list__tecno:hover .tecno__img{
+  transform: translateZ(26px) scale(1.06) rotateZ(-2deg);
+  filter: drop-shadow(0 10px 18px #00000088) drop-shadow(0 0 16px #00E5FF66);
+}
+
+/* Animación del borde */
+@keyframes spin{
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive fino */
+@media (max-width: 680px){
+  .technology__list{ gap: 12px; }
+  .list__tecno{
+    width: clamp(110px, 28vw, 140px);
+    border-radius: 16px;
+  }
+  .tecno__img{ width: clamp(56px, 12vw, 82px); }
+}
+
+/* Respeto por usuarios con reducción de movimiento */
+@media (prefers-reduced-motion: reduce){
+  .list__tecno,
+  .list__tecno::before,
+  .list__tecno::after,
+  .tecno__img{
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+
+/* En pantallas medianas, permitir grid si tienes muchos logos */
+@media (max-width: 680px){
+  .technology__list{ gap:10px; }
+  .tecno__img{ height:34px; }
+}
+
+/* ===== Experiencia (timeline “glass”) ===== */
+.work__list{
+  position:relative;
+  display:grid;
+  gap:14px;
+  padding-left: 28px; /* espacio para la línea */
+  margin: 18px 0 0 0;
+  list-style:none;
+}
+.work__list::before{
+  content:"";
+  position:absolute; left:12px; top:0; bottom:0; width:2px;
+  background: linear-gradient(var(--violet), var(--accent));
+  opacity:.5;
+}
+.list__work{
+  list-style:none;
+  padding:16px 18px;
+  border-radius:12px;
+  border:1px solid var(--glass-brd);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+}
+.work__subtitle{
+  margin:0 0 6px;
+  font-size: clamp(16px, 2.6vw, 20px);
+  color: var(--text);
+}
+.work__time{
+  display:block;
+  color: var(--muted);
+  font-size: .95rem;
+  margin-bottom: .25rem;
+}
+.work__description{
+  margin:0;
+  color: var(--text);
+  font-size: clamp(13px, 2.2vw, 16px);
+  line-height: 1.55;
+}
+
+/* ===== Estudios / Idiomas ===== */
+.studies__list,
+.language__list{
+  list-style: none;
+  padding:0;
+  margin: 18px 0 0 0;
+  display:grid;
+  gap:10px;
+}
 .list__item{
-    color: white;
-    margin-bottom: 10px;
-    font-size: 2rem;
-    padding-left: 10px;
-    text-decoration: none;
+  padding: 12px 14px;
+  border-radius:12px;
+  border:1px solid var(--glass-brd);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  color: var(--text);
+  font-size: clamp(14px, 2.2vw, 18px);
 }
-
-/* Ajuste para pantallas más pequeñas (menor a 1360px) */
-@media (max-width: 1360px) {
-    .technology__list {
-        display: grid; /* Cambia de flexbox a grid */
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
-        gap: 20px; /* Espaciado más reducido entre elementos */
-    }
-
-}
-
-
-
-
-
-
-
-

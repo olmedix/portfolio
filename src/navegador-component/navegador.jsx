@@ -1,60 +1,43 @@
+// src/navegador-component/navegador.jsx
 import React, { useState } from "react";
 import "./navegador.css";
-import { NavLink } from "react-router-dom";
 import { TiThMenu } from "react-icons/ti";
 
-export default function Navegador() {
+export default function Navegador({ active, sections }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen((v) => !v);
 
-  const ulNavegador = () => {
-    return (
-      <ul className="nav__list">
-        {/*  NavLink detecta por default la clase active y no es necesario agregarsela. */}
-        <li>
-          <NavLink to="/" onClick={toggleMenu}>
-            Inicio
-          </NavLink>
+  const links = (
+    <ul className="nav__list">
+      {sections.map((id) => (
+        <li key={id}>
+          <a
+            href={`#${id}`}
+            onClick={() => {
+              if (menuOpen) setMenuOpen(false);
+            }} // <- solo cierra si estaba abierto
+            className={`nav__link ${active === id ? "is-active" : ""}`}
+          >
+            {id.replace("-", " ")}
+          </a>
         </li>
-        <li>
-          <NavLink to="/sobre-mi" onClick={toggleMenu}>
-            Sobre mí
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/proyectos" onClick={toggleMenu}>
-            Proyectos
-          </NavLink>
-        </li>
-        {/*<li><NavLink to="/contacto" onClick={toggleMenu}>Contacto</NavLink></li>*/}
-        <li>
-          <NavLink to="/noticias" onClick={toggleMenu}>
-            Noticias
-          </NavLink>
-        </li>
-      </ul>
-    );
-  };
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+      ))}
+    </ul>
+  );
 
   return (
-    <header className="header__container">
-      <h1 className="header__title">Portfolio</h1>
-
-      {/* Botón de menú hamburguesa */}
+    <header className="header__container glass">
       <div className="menuBoton">
-        <div className="menu-button" onClick={toggleMenu}>
+        <button
+          className="menu-button"
+          onClick={toggleMenu}
+          aria-label="Abrir menú"
+        >
           <TiThMenu />
-        </div>
-
-        {/* Menú hamburguesa */}
-        {menuOpen && <nav className="hamburger-menu">{ulNavegador()}</nav>}
+        </button>
+        {menuOpen && <nav className="hamburger-menu">{links}</nav>}
       </div>
-
-      {/* Menú de navegación principal */}
-      <nav className="header__nav">{ulNavegador()}</nav>
+      <nav className="header__nav">{links}</nav>
     </header>
   );
 }

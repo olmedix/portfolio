@@ -1,112 +1,129 @@
+/* ===== Grid de proyectos ===== */
 .newsletter__container{
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    min-width: 600px;
-    
-    display: flex;
-    justify-content: center;
-    column-gap: 20px;
-    row-gap: 80px;
-    flex-wrap: wrap;
-    
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 20px;
+  padding: 24px 0 8px;
 }
 
+/* ===== Card “glass” ===== */
 .box__container{
-    position: relative;
-    margin:40px 10% 100px 10%;
-    width: 310px;
-    padding: 4px;
-    background-color: black;
-    box-shadow: 5px 5px 10px var(--color-01);
-    
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--glass-brd);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.box__container:hover{ transform: translateY(-6px); }
+
+.box__title{
+  display: flex;
+  margin: 0 auto;
+  padding-left: 10px;
+  width: min(1100px, 92vw);
+  font-size: clamp(20px, 3.6vw, 28px);
+  color: var(--text);
 }
 
-.box__container:hover{
-    transform: scale(1.05);
-    transition: transform 0.5s ease-in-out;
-}
-
-
+/* Imagen superior */
 .box__image{
-    width: 100%;
-    height: 200px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px 14px 0 0;
 }
 
+/* Meta/categoría */
 .box__image-title{
-    font-size: 1.5rem;
-    color: #d3d3d3;
-    margin-bottom: 10px;
+  font-size: .95rem;
+  color: var(--muted);
+  margin: 10px 16px 4px;
 }
 
+/* Título */
 .box__content-title{
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--color-01);
-    margin-bottom: 20px;
+  font-size: clamp(18px, 3vw, 20px);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 16px 10px;
 }
 
+/* Contenido */
 .box__content-container{
-    width: 100%;
-    margin-bottom: 20px;
-    overflow: hidden;
+  width: 100%;
+  padding: 0 16px;
+  margin-bottom: 12px;
+  overflow: hidden;
 }
-
 .box__content{
-    font-size: 2rem;
-    color: whitesmoke;
-    margin-bottom: 50px;
+  font-size: clamp(13px, 2.2vw, 16px);
+  color: var(--text);
+  line-height: 1.55;
+  margin: 0 0 10px 0;
 }
 
-.on,.off{
-    background-color: whitesmoke;
-    color: var(--color-01);
-    border-radius: 10px;
-    padding: 5px;
-    font-weight: 700;
-    cursor: pointer;
-  }
-.off{
-    background-color: var(--color-01);
-    color: white;
-  }
+/* Leer más / Ver menos */
+.on, .off{
+  margin-left: 8px;
+  padding: .25rem .6rem;
+  font-size: .85rem;
+  font-weight: 600;
+  border-radius: 999px;
+  border: 1px solid var(--glass-brd);
+  background: linear-gradient(135deg, #00E5FF33, #7C3AED22);
+  color: var(--text);
+  cursor: pointer;
+  transition: transform .2s;
+}
+.on:hover, .off:hover{ transform: translateY(-1px); }
 
+/* Acciones */
+.box__web,
 .box__button{
-    position: absolute;
-    bottom: 20px;
-    left: 15px;
-    
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  padding: 0 16px 16px;
 }
 
-.button__link{
-    width: 80%;
-    font-size: 2rem;
-    font-weight: bold;
-    border-radius: 20px;
-    padding: 5px 30px;
-   
-    text-decoration: none;
-    cursor: pointer;
-    background-color: rgb(32, 165, 210);
-    color: white;
-}
+/* Empuja el bloque de botones principal al fondo de la card */
+.box__button{ margin-top: auto; }
 
-.box__web{
-    margin-top: 5px;
-    margin-bottom: 70px;
-}
-
+/* Botones coherentes con .btn global */
+.button__link,
 .button__web{
-    margin-left: 12px;
-    font-size: 2rem;
-    font-weight: bold;
-    border-radius: 20px;
-    padding: 5px 30px;
-   
-    text-decoration: none;
-    cursor: pointer;
-    background-color: rgb(56, 190, 56);
-    color: white;
+  display: inline-block;
+  padding: .6rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--glass-brd);
+  background: linear-gradient(135deg, #00E5FF33, #7C3AED22);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .25s, box-shadow .25s, background .25s;
+  box-shadow: var(--shadow);
+}
+.button__link:hover,
+.button__web:hover{ transform: translateY(-2px); }
+
+/* Accesibilidad focus-visible */
+.button__link:focus-visible,
+.button__web:focus-visible,
+.on:focus-visible, .off:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Limpieza de estilos antiguos */
+.newsletter__container,
+.box__container{
+  background: transparent;
 }

@@ -2,7 +2,13 @@ import "./caja.css";
 import { useState } from "react";
 
 export default function CajaContenedor({ children }) {
-  return <div className="newsletter__container">{children}</div>;
+  return (
+    <div>
+      <h3 className="box__title">Proyectos</h3>
+
+      <div className="newsletter__container">{children}</div>
+    </div>
+  );
 }
 
 export function Caja({ category, img, title, text, link, linkText, web }) {
