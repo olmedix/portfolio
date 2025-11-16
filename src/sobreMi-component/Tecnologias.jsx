@@ -14,7 +14,11 @@ export default function Tecnologias() {
 
   const listaTecno = tecnologias.map((tecno) => (
     <li className="list__tecno">
-      <img className="tecno__img" src={"./img/" + tecno} alt={tecno} />
+      <img
+        className="tecno__img"
+        src={"./img/tecnologias/" + tecno}
+        alt={tecno}
+      />
     </li>
   ));
 

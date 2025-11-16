@@ -33,8 +33,7 @@ export default function Proyectos() {
           ? projects.map((dato) => (
               <Caja
                 key={dato.id}
-                img={`/img/imgProyectos/${dato.imagen}`}
-                imgTitle={dato.tituloImagen}
+                img={`/img/${dato.titulo}/${dato.imagenes[0]}`}
                 title={dato.titulo}
                 text={dato.contenido}
                 link={dato.githubFront}

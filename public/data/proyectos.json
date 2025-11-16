@@ -1,8 +1,16 @@
 [
     {
         "id":1,
-        "imagen": "Hotel Darder.png" ,
-        "tituloImagen": "Sistema de reservas de Hotel y Extras",
+        "imagenes": [
+            "Hotel Darder.png",
+            "hotel-categories.png",
+            "hotel-extras.png",
+            "hotel-home.png",
+            "hotel-myReservations.png",
+            "hotel-pension.png",
+            "hotel-rooms.png",
+            "hotel-updateUser.png"
+        ],
         "titulo": "Hotel Emili Darder",
         "contenido": "Aplicación web de reservas hoteleras con gestión de usuarios, control de overbooking, pasarela de pago y servicios extra descargables en PDF. Proyecto integrador donde aplico todo lo aprendido en mi Grado Superior de DAW.",
         "githubFront": "https://github.com/olmedix/front-hotelDarder",
@@ -12,27 +20,48 @@
     },
     {
         "id":2,
-        "imagen": "proyectoServidor.png" ,
-        "tituloImagen": "Trabajo con base de datos",
-        "titulo": "proyecto CRUD",
-        "contenido": "En este proyecto se busca el poner en práctica los conocimientos de PHP y de trabajar nuevamente con las BBDD. Se ha buscado el poder trabajar con creación, consulta, actualización y eliminación de registros.",
-        "githubFront": "https://github.com/olmedix/proyecto-CRUD"
+        "imagenes": [
+            "baleart-espais.png",
+            "baleart-comments.png", 
+            "baleart-home.png", 
+            "baleart-individual.png", 
+            "baleart-profile.png",
+            "baleart-register.png"
+        ],
+        "titulo": "Baleart",
+        "contenido": "Aplicación web completa para explorar y gestionar los lugares más emblemáticos y turísticos de las Islas Baleares. Muestra los lugares con mayor puntuación, permite filtrar por múltiples criterios, añadir comentarios y subir imágenes asociadas a esos comentarios, y ofrece un sistema completo de gestión de usuarios.",
+        "githubFront": "https://github.com/olmedix/front-baleart",
+        "githubBack": "https://github.com/olmedix/baleart"
           
     },
     {
         "id":3,
-        "imagen":"portfolio.png",
-        "tituloImagen":"Portfolio personal",
-        "titulo": "PORTFOLIO",
+        "imagenes": ["canyon.png"],
+        "titulo": "VR Juego del Cañón",
+        "contenido": "Pequeño juego de realidad virtual donde el jugador controla una cesta para atrapar proyectiles disparados desde un cañón. El juego funciona usando Node, Arduino y un sensor HC-SR04 que envía datos en tiempo real a la aplicación web mediante WebSocket.",
+        "githubFront": "https://github.com/olmedix/node_canyon"
+          
+    },
+    {
+        "id":4,
+        "imagenes":["portfolio.png"],
+        "titulo": "Portfolio",
         "contenido": "Primeros pasos en el mundo de React, en este trabajo se han puesto en uso los conocimientos de React. Se ha utilizado HTML5 y CSS3. Si quieres ver cómo se ha diseñado este proyecto te invito a visitar mi Github.",
         "githubFront": "https://github.com/olmedix/portfolio"
 
     },
     {
-        "id":4,
-        "imagen":"curriculum.png",
-        "tituloImagen":"CV con bootstrap",
-        "titulo": "CURRICULUM",
+        "id":5,
+        "imagenes": ["proyectoServidor.png"],
+        "titulo": "Proyecto CRUD",
+        "contenido": "En este proyecto se busca el poner en práctica los conocimientos de PHP y de trabajar nuevamente con las BBDD. Se ha buscado el poder trabajar con creación, consulta, actualización y eliminación de registros.",
+        "githubFront": "https://github.com/olmedix/proyecto-CRUD"
+          
+    },
+    {
+        "id":6,
+        "imagenes":["curriculum.png"],
+        "titulo": "Curriculum",
         "contenido": "Un proyecto donde la finalidad es la de poner en práctica los conocimientos de Bootstrap. Además el objetivo era que se viese bien en dispositivos móviles. Tiene múltiples enlaces a mi perfil y añade la posibilidad de descargar mi CV en formato pdf.",
         "githubFront": "https://github.com/olmedix/curriculum"
 
