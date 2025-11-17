@@ -36,7 +36,7 @@ export function Caja({ category, img, title, text, link, linkText, web }) {
   return (
     <>
       <article className="box__container">
-        <button className="btn-ver" onClick={() => openModal(img[imageNumber])}>
+        <button className="btn-ver color-bar" onClick={() => openModal(img[imageNumber])}>
           Ver
         </button>
 
