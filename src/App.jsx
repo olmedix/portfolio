@@ -50,12 +50,13 @@ export default function App() {
         <section id="inicio" className="section">
           <Home />
         </section>
-        <section id="sobre-mi" className="section">
-          <SobreMi />
-        </section>
         <section id="proyectos" className="section">
           <Proyectos />
         </section>
+        <section id="sobre-mi" className="section">
+          <SobreMi />
+        </section>
+        
         {/*
         <section id="contacto" className="section">
            Puedes renderizar <Contacto/> si quieres recuperar ese componente 

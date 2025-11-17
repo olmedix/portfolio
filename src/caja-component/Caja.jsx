@@ -1,5 +1,6 @@
 import "./caja.css";
 import { useState } from "react";
+import { Carousel } from "../carousel/Carousel"; 
 
 export default function CajaContenedor({ children }) {
   return (
@@ -20,7 +21,11 @@ export function Caja({ category, img, title, text, link, linkText, web }) {
 
   return (
     <article className="box__container">
-      <img className="box__image" src={img} alt={title} />
+      {img.length === 1 ? (
+        <img className="box__image" src={img[0]} alt={title} />
+      ) : (
+        <Carousel images={img} />
+      )}
 
       <h3 className="box__image-title">{category}</h3>
 

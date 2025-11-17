@@ -33,14 +33,14 @@ export default function Proyectos() {
           ? projects.map((dato) => (
               <Caja
                 key={dato.id}
-                img={`/img/${dato.titulo}/${dato.imagenes[0]}`}
+                img={dato.imagenes.map(img => `/img/${dato.titulo}/${img}`)}
                 title={dato.titulo}
                 text={dato.contenido}
                 link={dato.githubFront}
                 linkText="Ver código"
                 web={dato.link}
               />
-            ))
+          ))
           : !loading && <NoComponent name={"proyectos"} />}
       </CajaContenedor>
     </div>
