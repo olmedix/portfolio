@@ -42,18 +42,11 @@ export default function Home() {
               <FaGithub size={18} />
             </a>
             <a
-              href="https://www.linkedin.com/in/olmedix"
+              href="https://www.linkedin.com/in/juan-jose-olmedo-alba-691459155/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin size={18} />
-            </a>
-            <a
-              href="https://www.instagram.com/olmedix"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaInstagram size={18} />
             </a>
             <a href="mailto:olmedix@gmail.com">
               <FaEnvelope size={18} />
