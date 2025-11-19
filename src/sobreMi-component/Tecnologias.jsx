@@ -5,11 +5,16 @@ export default function Tecnologias() {
   const tecnologias = [
     "html5.svg",
     "css.svg",
+    "tailwind-css.svg",
     "javascript.svg",
     "react.svg",
+    "node-js.svg",
     "php_dark.svg",
     "laravel.svg",
     "mysql.svg",
+    "mongodb.svg",
+    "git.svg",
+    "github.svg",
   ];
 
   const listaTecno = tecnologias.map((tecno) => (
