@@ -36,8 +36,8 @@ export default function Proyectos() {
                 img={dato.imagenes.map(img => `/img/${dato.titulo}/${img}`)}
                 title={dato.titulo}
                 text={dato.contenido}
-                link={dato.githubFront}
-                linkText="Ver código"
+                linkFront={dato.githubFront}
+                linkBack={dato.githubBack}
                 web={dato.link}
               />
           ))

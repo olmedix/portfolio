@@ -12,7 +12,7 @@ export default function CajaContenedor({ children }) {
   );
 }
 
-export function Caja({ category, img, title, text, link, linkText, web }) {
+export function Caja({ img, title, text, linkFront, linkBack, web }) {
   const [readMore, setReadMore] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
@@ -46,7 +46,6 @@ export function Caja({ category, img, title, text, link, linkText, web }) {
           <Carousel images={img} imageNumber={imageNumber} setImageNumber={setImageNumber} />
         )}
 
-        <h3 className="box__image-title">{category}</h3>
 
         <h4 className="box__content-title">{title}</h4>
         <div className="box__content-container">
@@ -81,13 +80,23 @@ export function Caja({ category, img, title, text, link, linkText, web }) {
 
         <div className="box__button">
           <a
-            href={link}
+            href={linkFront}
             target="_blank"
             className="button__link"
             rel="noreferrer"
           >
-            {linkText}
+            Github Front
           </a>
+          {linkBack && (
+            <a
+              href={linkBack}
+              target="_blank"
+              className="button__link"
+              rel="noreferrer"
+            >
+              Github Back
+            </a>
+          )}
         </div>
       </article>
       {/* MODAL */}
