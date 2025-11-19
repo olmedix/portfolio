@@ -16,8 +16,7 @@ export function Caja({ img, title, text, linkFront, linkBack, web }) {
   const [readMore, setReadMore] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
-   const [imageNumber, setImageNumber] = useState(0);
-  
+  const [imageNumber, setImageNumber] = useState(0);
 
   const openModal = (imgUrl) => {
     setSelectedImg(imgUrl);
@@ -36,18 +35,29 @@ export function Caja({ img, title, text, linkFront, linkBack, web }) {
   return (
     <>
       <article className="box__container">
-        <button className="btn-ver color-bar" onClick={() => openModal(img[imageNumber])}>
+        <button
+          className="btn-ver color-bar"
+          onClick={() => openModal(img[imageNumber])}
+        >
           Ver
         </button>
 
         {img.length === 1 ? (
           <img className="box__image" src={img[0]} alt={title} />
         ) : (
-          <Carousel images={img} imageNumber={imageNumber} setImageNumber={setImageNumber} />
+          <Carousel
+            images={img}
+            imageNumber={imageNumber}
+            setImageNumber={setImageNumber}
+          />
         )}
+        <div className="box__title">
+          <h4 className="box__content-title">{title}</h4>
+          {title === "Hotel Emili Darder" && (
+            <img className="box__star" src="/img/star.png" alt="Star" />
+          )}
+        </div>
 
-
-        <h4 className="box__content-title">{title}</h4>
         <div className="box__content-container">
           <p className="box__content">
             {readMore || text.length < 100

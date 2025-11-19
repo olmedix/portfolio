@@ -25,6 +25,15 @@
 
 .box__title{
   display: flex;
+  align-items: center;
+  padding: 8px 0;
+}
+.box__star{
+  width: 50px;
+}
+
+.box__title{
+  display: flex;
   margin: 0 auto;
   padding-left: 10px;
   width: min(1100px, 92vw);
