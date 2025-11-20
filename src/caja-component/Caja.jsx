@@ -12,7 +12,15 @@ export default function CajaContenedor({ children }) {
   );
 }
 
-export function Caja({ img, title, text, linkFront, linkBack, web }) {
+export function Caja({
+  img,
+  technologies,
+  title,
+  text,
+  linkFront,
+  linkBack,
+  web,
+}) {
   const [readMore, setReadMore] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
@@ -53,9 +61,16 @@ export function Caja({ img, title, text, linkFront, linkBack, web }) {
         )}
         <div className="box__title">
           <h4 className="box__content-title">{title}</h4>
-          {title === "Hotel Emili Darder" && (
-            <img className="box__star" src="/img/star.png" alt="Star" />
-          )}
+
+          {technologies.map((tech, index) => (
+            <img
+              key={index}
+              src={tech}
+              alt={tech.split("/").pop().split(".")[0]}
+              title={tech.split("/").pop().split(".")[0]}
+              className="box__technologies"
+            />
+          ))}
         </div>
 
         <div className="box__content-container">

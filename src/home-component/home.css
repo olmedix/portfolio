@@ -94,6 +94,7 @@ body { background: var(--bg); color: var(--text); }
   transform: translateY(-2px);
   box-shadow: 0 10px 22px #00E5FF66, inset 0 0 0 1px #39efff;
   filter: saturate(110%);
+  background-color: white;
 }
 
 /* ======= Columna derecha: foto con halo ======= */
@@ -109,15 +110,15 @@ body { background: var(--bg); color: var(--text); }
   background: #fff;
 }
 
-/* Halo exterior (detrás de la foto) */
+/* Halo exterior (detrás de la foto) 
 .photo::before{
   content:""; position:absolute; inset:-16px; border-radius:50%; z-index:-1;
   background: radial-gradient(circle at 60% 30%, #00E5FF55 0 35%, transparent 60%),
               radial-gradient(circle at 30% 70%, #7C3AED55 0 35%, transparent 60%);
   filter: blur(22px);
 }
-
-/* Anillo finito cyan dentro (detalle) */
+*/
+/* Anillo finito cyan dentro (detalle) 
 .photo::after{
   --ring: 10px;
   content:""; position:absolute; inset: calc(10px - var(--ring));
@@ -127,7 +128,7 @@ body { background: var(--bg); color: var(--text); }
           mask: radial-gradient(farthest-side, transparent calc(100% - var(--ring)), #000 calc(100% - var(--ring)));
   opacity:.9; filter: drop-shadow(0 0 10px #00E5FF66);
 }
-
+*/
 /* Imagen */
 .photo img{
   width:100%; height:100%; object-fit:cover; object-position: 50% 20%; display:block;

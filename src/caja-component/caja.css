@@ -31,6 +31,12 @@
 .box__star{
   width: 50px;
 }
+.box__technologies{
+  display: flex;
+  width: 30px;
+  margin-right: 15px;
+
+}
 
 .box__title{
   display: flex;
@@ -49,6 +55,7 @@
   display: block;
  
 }
+
 
 /* Meta/categoría */
 .box__image-title{

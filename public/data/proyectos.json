@@ -13,6 +13,12 @@
         ],
         "titulo": "Hotel Emili Darder",
         "contenido": "Aplicación web de reservas hoteleras con gestión de usuarios, control de overbooking, pasarela de pago y servicios extra descargables en PDF. Proyecto integrador donde aplico todo lo aprendido en mi Grado Superior de DAW.",
+        "tecnologias": [
+            "laravel.svg", 
+            "react.svg", 
+            "mysql.svg",
+            "tailwind-css.svg"
+        ],
         "githubFront": "https://github.com/olmedix/front-hotelDarder",
         "githubBack": "https://github.com/olmedix/laravel-HotelEmiliDarder",
         "link": "https://olmedix.es"
@@ -30,6 +36,12 @@
         ],
         "titulo": "Baleart",
         "contenido": "Aplicación web completa para explorar y gestionar los lugares más emblemáticos y turísticos de las Islas Baleares. Muestra los lugares con mayor puntuación, permite filtrar por múltiples criterios, añadir comentarios y subir imágenes asociadas a esos comentarios, y ofrece un sistema completo de gestión de usuarios.",
+        "tecnologias": [
+            "laravel.svg", 
+            "react.svg", 
+            "mysql.svg",
+            "tailwind-css.svg"
+        ],
         "githubFront": "https://github.com/olmedix/front-baleart",
         "githubBack": "https://github.com/olmedix/baleart"
           
@@ -39,6 +51,11 @@
         "imagenes": ["canyon.png"],
         "titulo": "VR Juego del Cañón",
         "contenido": "Pequeño juego de realidad virtual donde el jugador controla una cesta para atrapar proyectiles disparados desde un cañón. El juego funciona usando Node, Arduino y un sensor HC-SR04 que envía datos en tiempo real a la aplicación web mediante WebSocket.",
+        "tecnologias": [
+            "node-js.svg", 
+            "arduino.jpg", 
+            "A-Frame.PNG"
+        ],
         "githubFront": "https://github.com/olmedix/node_canyon"
           
     },
@@ -47,6 +64,11 @@
         "imagenes":["portfolio.png"],
         "titulo": "Portfolio",
         "contenido": "Primeros pasos en el mundo de React, en este trabajo se han puesto en uso los conocimientos de React. Se ha utilizado HTML5 y CSS3. Si quieres ver cómo se ha diseñado este proyecto te invito a visitar mi Github.",
+        "tecnologias": [
+            "react.svg", 
+            "html5.svg", 
+            "css.svg"
+        ],
         "githubFront": "https://github.com/olmedix/portfolio"
 
     },
@@ -55,6 +77,10 @@
         "imagenes": ["proyectoServidor.png"],
         "titulo": "Proyecto CRUD",
         "contenido": "En este proyecto se busca el poner en práctica los conocimientos de PHP y de trabajar nuevamente con las BBDD. Se ha buscado el poder trabajar con creación, consulta, actualización y eliminación de registros.",
+        "tecnologias": [
+            "php_dark.svg", 
+            "mysql.svg"
+        ],
         "githubFront": "https://github.com/olmedix/proyecto-CRUD"
           
     },
@@ -63,6 +89,7 @@
         "imagenes":["curriculum.png"],
         "titulo": "Curriculum",
         "contenido": "Un proyecto donde la finalidad es la de poner en práctica los conocimientos de Bootstrap. Además el objetivo era que se viese bien en dispositivos móviles. Tiene múltiples enlaces a mi perfil y añade la posibilidad de descargar mi CV en formato pdf.",
+        "tecnologias": ["bootstrap.png"],
         "githubFront": "https://github.com/olmedix/curriculum"
 
     }

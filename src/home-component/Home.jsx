@@ -21,9 +21,6 @@ export default function Home() {
           </p>
 
           <div className="cta">
-            <a className="btn btn--primary" href="#proyectos">
-              Ver proyectos
-            </a>
             <a
               className="btn btn--secondary"
               href="/juanjoOlmedoCV.pdf"
