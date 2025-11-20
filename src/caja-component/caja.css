@@ -28,8 +28,13 @@
   align-items: center;
   padding: 8px 0;
 }
-.box__star{
-  width: 50px;
+.box__best{
+  display: flex;
+  position: absolute;
+  z-index: 1000;
+  top: -20px;
+  left: -18px;
+  width: 150px;
 }
 .box__technologies{
   display: flex;

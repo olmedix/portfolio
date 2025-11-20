@@ -43,6 +43,9 @@ export function Caja({
   return (
     <>
       <article className="box__container">
+        {title == "Hotel Emili Darder" && (
+          <img src="/img/best.png" alt="Emili Darder" className="box__best" />
+        )}
         <button
           className="btn-ver color-bar"
           onClick={() => openModal(img[imageNumber])}
