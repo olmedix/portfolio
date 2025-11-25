@@ -98,7 +98,7 @@
         "id":7,
         "imagenes":["frameworkNode.jpeg"],
         "titulo": "Framework Node.js",
-        "contenido": "Mini-framework de Node.js desde cero sin utilizar Express u otros frameworks, con el objetivo de aprender en profundidad cómo funciona Node.js. OBJETIVOS LOGRADOS: Servidor http nativo, Router propio con soporte para parámetro dinámicos, middleware de autenticación JWT, blacklist JWT (mongoDB), Sistemas de permisos basado en middlewares,validación de datos , conexion MongoDB con clase propia, Rate limiting real ( anti-brute-force), Paginación , filtros y listado eficientes",
+        "contenido": "Mini-framework de Node.js desde cero sin utilizar Express u otros frameworks, con el objetivo de aprender en profundidad cómo funciona Node.js. OBJETIVOS LOGRADOS: Servidor http nativo, Router propio con soporte para parámetro dinámicos, middleware de autenticación JWT, blacklist JWT (mongoDB), Sistemas de permisos basado en middlewares,validación de datos , conexion MongoDB con clase propia, Rate limiting real ( anti-brute-force), Testing, Paginación , filtros y listado eficientes",
         "tecnologias": ["node-js.svg"],
         "githubFront": "https://github.com/olmedix/node_mongoDB",
         "githubBack": "https://github.com/olmedix/node_mongoDB"
