@@ -47,7 +47,7 @@ export function Caja({
           <img src="/img/best.png" alt="Emili Darder" className="box__best" />
         )}
         <button
-          className="btn-ver color-bar"
+          className="btn-ver color-bar hidden md:block"
           onClick={() => openModal(img[imageNumber])}
         >
           Ver
