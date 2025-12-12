@@ -6,9 +6,9 @@
     "axios": "^1.7.8",
     "bootstrap": "^5.3.3",
     "embla-carousel-react": "^8.6.0",
-    "react": "^19.1.2",
+    "react": "^19.2.3",
     "react-bootstrap": "^2.10.6",
-    "react-dom": "^19.1.2",
+    "react-dom": "^19.2.3",
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.27.0",
     "web-vitals": "^2.1.4"
@@ -60,6 +60,9 @@
       "nth-check": ">=2.0.1",
       "postcss": ">=8.4.31",
       "webpack-dev-server": ">=5.2.1"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
