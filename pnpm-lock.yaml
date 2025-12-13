@@ -22,6 +22,9 @@ importers:
       embla-carousel-react:
         specifier: ^8.6.0
         version: 8.6.0(react@19.2.3)
+      node-forge:
+        specifier: ^1.3.3
+        version: 1.3.3
       react:
         specifier: ^19.2.3
         version: 19.2.3
