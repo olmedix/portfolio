@@ -46,9 +46,25 @@
         "githubFront": "https://github.com/olmedix/front-baleart",
         "githubBack": "https://github.com/olmedix/baleart"
           
-    },
+    },  
     {
         "id":3,
+        "imagenes":["frameworkNode.jpeg"],
+        "titulo": "Framework Node.js",
+        "contenido": "Mini-framework de Node.js desde cero sin utilizar Express u otros frameworks, con el objetivo de aprender en profundidad cómo funciona Node.js. OBJETIVOS LOGRADOS: Servidor http nativo, Router propio con soporte para parámetro dinámicos, middleware de autenticación JWT, blacklist JWT (mongoDB), Sistemas de permisos basado en middlewares,validación de datos , conexion MongoDB con clase propia, Rate limiting real ( anti-brute-force), Testing, Paginación , filtros y listado eficientes",
+        "tecnologias": ["node-js.svg"],
+        "githubBack": "https://github.com/olmedix/node_mongoDB"
+    },
+    {
+        "id":4,
+        "imagenes":["frameworkJS.png"],
+        "titulo": "Framework JS",
+        "contenido": "Mini-framework frontend desarrollado en React desde cero, con el objetivo de comprender en profundidad la arquitectura interna de aplicaciones React y la gestión del estado, la comunicación con APIs y la reutilización de componentes. El framework fue diseñado para consumir los endpoints del backend desarrollado previamente en Node.js.",
+        "tecnologias": ["react.svg","bootstrap.png"],
+        "githubFront": "https://github.com/olmedix/Framework-JS"
+    },
+    {
+        "id":5,
         "imagenes": ["canyon.png"],
         "titulo": "VR Juego del Cañón",
         "contenido": "Pequeño juego de realidad virtual donde el jugador controla una cesta para atrapar proyectiles disparados desde un cañón. El juego funciona usando Node, Arduino y un sensor HC-SR04 que envía datos en tiempo real a la aplicación web mediante WebSocket.",
@@ -58,11 +74,10 @@
             "A-Frame.PNG"
         ],
         "githubFront": "https://github.com/olmedix/node_canyon"
-          
-    },
+    }, 
     {
-        "id":4,
-        "imagenes":["portfolio.png"],
+        "id":6,
+        "imagenes":["porfolio.png"],
         "titulo": "Portfolio",
         "contenido": "Primeros pasos en el mundo de React, en este trabajo se han puesto en uso los conocimientos de React. Se ha utilizado HTML5 y CSS3. Si quieres ver cómo se ha diseñado este proyecto te invito a visitar mi Github.",
         "tecnologias": [
@@ -71,10 +86,9 @@
             "css.svg"
         ],
         "githubFront": "https://github.com/olmedix/portfolio"
-
     },
     {
-        "id":5,
+        "id":7,
         "imagenes": ["proyectoServidor.png"],
         "titulo": "Proyecto CRUD",
         "contenido": "En este proyecto se busca el poner en práctica los conocimientos de PHP y de trabajar nuevamente con las BBDD. Se ha buscado el poder trabajar con creación, consulta, actualización y eliminación de registros.",
@@ -86,23 +100,12 @@
           
     },
     {
-        "id":6,
+        "id":8,
         "imagenes":["curriculum.png"],
         "titulo": "Curriculum",
         "contenido": "Un proyecto donde la finalidad es la de poner en práctica los conocimientos de Bootstrap. Además el objetivo era que se viese bien en dispositivos móviles. Tiene múltiples enlaces a mi perfil y añade la posibilidad de descargar mi CV en formato pdf.",
         "tecnologias": ["bootstrap.png"],
         "githubFront": "https://github.com/olmedix/curriculum"
-
-    },
-    {
-        "id":7,
-        "imagenes":["frameworkNode.jpeg"],
-        "titulo": "Framework Node.js",
-        "contenido": "Mini-framework de Node.js desde cero sin utilizar Express u otros frameworks, con el objetivo de aprender en profundidad cómo funciona Node.js. OBJETIVOS LOGRADOS: Servidor http nativo, Router propio con soporte para parámetro dinámicos, middleware de autenticación JWT, blacklist JWT (mongoDB), Sistemas de permisos basado en middlewares,validación de datos , conexion MongoDB con clase propia, Rate limiting real ( anti-brute-force), Testing, Paginación , filtros y listado eficientes",
-        "tecnologias": ["node-js.svg"],
-        "githubFront": "https://github.com/olmedix/node_mongoDB",
-        "githubBack": "https://github.com/olmedix/node_mongoDB"
-
     }
 
     

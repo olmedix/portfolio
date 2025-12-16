@@ -107,14 +107,16 @@ export function Caja({
         </div>
 
         <div className="box__button">
-          <a
-            href={linkFront}
-            target="_blank"
-            className="button__link"
-            rel="noreferrer"
-          >
-            Github Front
-          </a>
+          {linkFront && (
+            <a
+              href={linkFront}
+              target="_blank"
+              className="button__link"
+              rel="noreferrer"
+            >
+              Github Front
+            </a>
+          )}
           {linkBack && (
             <a
               href={linkBack}
