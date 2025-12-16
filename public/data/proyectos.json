@@ -57,7 +57,7 @@
     },
     {
         "id":4,
-        "imagenes":["frameworkJS.png"],
+        "imagenes":["frameworkJS.png","add.png","delete.png","update.png","show.png"],
         "titulo": "Framework JS",
         "contenido": "Mini-framework frontend desarrollado en React desde cero, con el objetivo de comprender en profundidad la arquitectura interna de aplicaciones React y la gestión del estado, la comunicación con APIs y la reutilización de componentes. El framework fue diseñado para consumir los endpoints del backend desarrollado previamente en Node.js.",
         "tecnologias": ["react.svg","bootstrap.png"],
