@@ -5,7 +5,7 @@
   position: sticky; top: 16px; z-index: 50;
   margin: 16px auto; width: min(1100px, 92%);
   padding: .6rem 1rem;
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: end;
   border-radius: 999px;
 }
 
@@ -41,7 +41,9 @@
 }
 
 /* ===== Botón hamburguesa + menú móvil ===== */
-.menuBoton{ position: relative; }
+.menuBoton{ 
+  position: right;;
+}
 
 .menu-button{
   display: none;  /* se muestra en móvil */
@@ -51,6 +53,7 @@
   font-size: 1.8rem;
   padding: .4rem .6rem;
   border-radius: 10px;
+  
 }
 
 /* Dropdown */
