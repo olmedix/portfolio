@@ -19,13 +19,14 @@ body { background: var(--bg); color: var(--text); }
   padding: 96px 0 72px;
 }
 
-/* Glow de fondo (mancha violeta arriba-izq + cyan abajo-der) */
+/* Glow de fondo (mancha violeta arriba-izq + cyan abajo-der) 
 .hero-grid::before{
   content:""; position:absolute; inset:-22vmax; z-index:-1; filter: blur(48px);
   background:
     radial-gradient(40vmax 40vmax at 18% 14%, #7C3AED22 0%, transparent 60%),
     radial-gradient(46vmax 46vmax at 84% 86%, #00E5FF2e 0%, transparent 60%);
 }
+    */
 
 /* ======= Columna izquierda ======= */
 .hero-left{ display:flex; flex-direction:column; gap: 10px; }
