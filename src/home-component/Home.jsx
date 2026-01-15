@@ -54,7 +54,7 @@ export default function Home() {
         {/* Columna derecha: foto con halo */}
         <div className="hero-right">
           <figure className="photo">
-            <img src="img/juanjo.png" alt="Juanjo Olmedo" />
+            <img src="img/juanjoCV.png" alt="Juanjo Olmedo" />
           </figure>
         </div>
       </section>
